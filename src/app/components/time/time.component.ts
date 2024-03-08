@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UtilsService } from 'src/app/services/utils.services';
+import { UtilsService } from '../../services/utils.services';
 import { timeLongDifferenceFromNow } from '../../services/time-difference';
 import { TimeHelper } from '../../services/time.helper';
 
@@ -9,6 +9,7 @@ import { TimeHelper } from '../../services/time.helper';
 })
 export class TimeComponent implements OnInit {
   private numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
   /*   
 private timeSpans = [
     '33.03:42:55',
