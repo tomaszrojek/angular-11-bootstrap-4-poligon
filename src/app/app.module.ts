@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ObservableComponent } from './observable/observable.component';
+import { TimeComponent } from './time/time.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -14,6 +15,7 @@ import { ObservableComponent } from './observable/observable.component';
     HeaderComponent,
     LayoutComponent,
     ObservableComponent,
+    TimeComponent,
   ],
   bootstrap: [AppComponent],
 })
