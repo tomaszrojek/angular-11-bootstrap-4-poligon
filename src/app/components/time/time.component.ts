@@ -8,9 +8,9 @@ import {
   tap,
   withLatestFrom,
 } from 'rxjs/operators';
-import { ArrayService } from '../services/array.service';
-import { timeLongDifferenceFromNow } from '../services/time-difference';
-import { TimeHelper } from '../services/time.helper';
+import { UtilsService } from 'src/app/services/utils.services';
+import { timeLongDifferenceFromNow } from '../../services/time-difference';
+import { TimeHelper } from '../../services/time.helper';
 
 @Component({
   selector: 'app-time',
@@ -56,9 +56,36 @@ private timeSpans = [
     console.log('--------------');
     console.log(this.timeSpans);
 
+    //this.testTimespanParsing();
+    //this.testTimespanRegexMatch();
+
     //this.testTimeSpanLongToDHms();
     this.testTimeSpanLongToSeconds();
     //this.testTimeSpanLongDifference();
+  }
+
+  testTimespanParsing() {
+    //const timespanStr = '08:33:12.5625591';
+    const timespanStr = '11:30:22.002';
+    //const timespanStr = '11:30:22';
+    //const timespanStr = '11:30:';
+    //const timespanStr = '01';
+    //const timespanStr = '';
+    const result = UtilsService.timespanToTotalSeconds(timespanStr);
+
+    console.log(`Total Sesond: ${result}`);
+  }
+
+  testTimespanRegexMatch() {
+    //const timespanStr = '08:33:12.5625591';
+    const timespanStr = '11:30:22.002';
+    //const timespanStr = '11:30:22';
+    //const timespanStr = '11:30:';
+    //const timespanStr = '01';
+    //const timespanStr = '';
+
+    const foundInvalidCharakters = /[^0-9:.]/.test(timespanStr);
+    console.log(`foundInvalidCharakters: ${foundInvalidCharakters}`);
   }
 
   testTimeSpanLongToDHms() {

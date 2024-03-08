@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { LayoutComponent } from './layout/layout.component';
-import { ObservableComponent } from './observable/observable.component';
-import { TimeComponent } from './time/time.component';
+
+import { LayoutComponent } from './components/layout/layout.component';
+import { ObservableComponent } from './components/observable/observable.component';
+import { TimeComponent } from './components/time/time.component';
+import { HeaderComponent } from './components/header/header.component';
+import { UtilsComponent } from './components/utils/utils.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -16,6 +18,7 @@ import { TimeComponent } from './time/time.component';
     LayoutComponent,
     ObservableComponent,
     TimeComponent,
+    UtilsComponent,
   ],
   bootstrap: [AppComponent],
 })

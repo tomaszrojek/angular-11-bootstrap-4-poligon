@@ -7,8 +7,7 @@ import {
   tap,
   withLatestFrom,
 } from 'rxjs/operators';
-import { ArrayService } from '../services/array.service';
-import { UtilsService } from '../services/utils.services';
+import { ArrayService } from '../../services/array.service';
 
 @Component({
   selector: 'app-observable',
@@ -82,8 +81,6 @@ export class ObservableComponent implements OnInit {
     //this.testArrayOperations();
     //this.testObservable();
     this.testObservableSwitchMap();
-    //this.testTimespanParsing();
-    this.testTimespanRegexMatch();
   }
 
   testConstructDeconstruct() {
@@ -122,31 +119,6 @@ export class ObservableComponent implements OnInit {
     };
 
     console.log(p1);
-  }
-
-  testArrayOperations() {
-    console.log(this.persons);
-
-    var newPersons = ArrayService.updateOrInsertItemWithArrayCopy(
-      this.persons,
-      (p) => p.age == 42,
-      this.person5
-    );
-    console.log('old:\n ', this.persons);
-    console.log('new:\n ', newPersons);
-
-    var newPersons2 = ArrayService.forEachExistingTargetItems(
-      [...this.persons],
-      newPersons,
-      (si, ti) => si.age == ti.age,
-      (si, ti) => {
-        ti.lastName = si.lastName;
-        console.log(si, ti);
-        return ti;
-      }
-    );
-
-    console.log('new2:\n ', newPersons2);
   }
 
   testObservable() {
@@ -222,6 +194,7 @@ export class ObservableComponent implements OnInit {
     );
     result.subscribe((x) => console.log(x));
   }
+
   testArrayOperations() {
     console.log(this.persons);
 
@@ -245,29 +218,5 @@ export class ObservableComponent implements OnInit {
     );
 
     console.log('new2:\n ', newPersons2);
-  }
-
-  testTimespanParsing() {
-    //const timespanStr = '08:33:12.5625591';
-    const timespanStr = '11:30:22.002';
-    //const timespanStr = '11:30:22';
-    //const timespanStr = '11:30:';
-    //const timespanStr = '01';
-    //const timespanStr = '';
-    const result = UtilsService.timespanToTotalSeconds(timespanStr);
-
-    console.log(`Total Sesond: ${result}`);
-  }
-
-  testTimespanRegexMatch() {
-    //const timespanStr = '08:33:12.5625591';
-    const timespanStr = '11:30:22.002';
-    //const timespanStr = '11:30:22';
-    //const timespanStr = '11:30:';
-    //const timespanStr = '01';
-    //const timespanStr = '';
-
-    const foundInvalidCharakters = /[^0-9:.]/.test(timespanStr);
-    console.log(`foundInvalidCharakters: ${foundInvalidCharakters}`);
   }
 }
