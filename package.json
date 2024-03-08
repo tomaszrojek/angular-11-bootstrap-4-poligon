@@ -12,7 +12,8 @@
     "@angular/router": "6.0.0",
     "core-js": "2.5.5",
     "rxjs": "6.1.0",
-    "tslib": "^2.6.2",
+    "src": "^1.1.2",
+    "tslib": "2.6.2",
     "zone.js": "0.8.26"
   },
   "scripts": {
