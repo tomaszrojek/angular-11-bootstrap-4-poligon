@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from, fromEvent, interval, of } from 'rxjs';
+import { from, of } from 'rxjs';
 import {
   first,
   mergeMap,
@@ -8,7 +8,6 @@ import {
   withLatestFrom,
 } from 'rxjs/operators';
 import { ArrayService } from '../services/array.service';
-import { UtilsService } from '../services/utils.services';
 
 @Component({
   selector: 'app-observable',
