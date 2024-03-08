@@ -1,13 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { forEach } from '@angular/router/src/utils/collection';
-import { from, of } from 'rxjs';
-import {
-  first,
-  mergeMap,
-  switchMap,
-  tap,
-  withLatestFrom,
-} from 'rxjs/operators';
 import { UtilsService } from 'src/app/services/utils.services';
 import { timeLongDifferenceFromNow } from '../../services/time-difference';
 import { TimeHelper } from '../../services/time.helper';
