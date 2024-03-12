@@ -28,6 +28,19 @@ export class ArrayService {
     return [...source];
   }
 
+  /**
+   * removes item of array if exists otherwise do nothing
+   * Always returns copy of array
+   * */
+  public static removeItemWithArrayCopy<T>(
+    source: T[],
+    predicate: (value: T) => boolean
+  ): any[] {
+    let index = source.findIndex(predicate);
+    index = index < 0 ? source.length : index;
+    return [...source.slice(0, index), ...source.slice(index + 1)];
+  }
+
   public static forEachExistingTargetItems<T>(
     targetItems: T[],
     sourceItems: T[],
