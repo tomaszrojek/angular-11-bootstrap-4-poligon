@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { from, fromEvent, interval, of } from 'rxjs';
+import { from, fromEvent, interval, of, pipe } from 'rxjs';
+import { isEqual } from 'lodash';
 import {
+  distinctUntilChanged,
   first,
   mergeMap,
   switchMap,
@@ -80,7 +82,8 @@ export class ObservableComponent implements OnInit {
     //this.testCombining();
     //this.testArrayOperations();
     //this.testObservable();
-    this.testObservableSwitchMap();
+    //this.testObservableSwitchMap();
+    this.testDistinctUntilChanged();
   }
 
   testConstructDeconstruct() {
@@ -218,5 +221,34 @@ export class ObservableComponent implements OnInit {
     );
 
     console.log('new2:\n ', newPersons2);
+  }
+
+  testDistinctUntilChanged() {
+    // kolekcja wartości prstych
+    console.log('kolekcja wartości prstych');
+    of(
+      '66e4b95a-5277-4930-bae0-0c7a55c982b3',
+      '66e4b95a-5277-4930-bae0-0c7a55c982b3'
+    )
+      .pipe(distinctUntilChanged())
+      .subscribe((x) => console.log(x));
+    // kolekcja wartości złożonych
+    console.log('kolekcja wartości złożonych');
+    of(
+      { klucz: '66e4b95a-5277-4930-bae0-0c7a55c982b3' },
+      { klucz: '66e4b95a-5277-4930-bae0-0c7a55c982b3' },
+      { klucz: '66e4b95a-5277-4930-bae0-0c7a55c982b3' },
+      { klucz: '66e4b95a-5277-4930-bae0-0c7a55c982b3' }
+    )
+      .pipe(
+        //distinctUntilChanged() // to nie działa
+        //distinctUntilChanged((prev, next) => prev.klucz == next.klucz) // to działa
+        //distinctUntilChanged((prev, next) => prev !== next) // to działa
+        //distinctUntilChanged(isEqual) // to działa
+        distinctUntilChanged((prev, cur) => { // to działa
+          return JSON.stringify(prev) === JSON.stringify(cur);
+        })
+      )
+      .subscribe((x) => console.log(x));
   }
 }
