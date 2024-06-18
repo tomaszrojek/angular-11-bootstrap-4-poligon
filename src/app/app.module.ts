@@ -14,6 +14,7 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { TimeComponent } from './components/time/time.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UtilsComponent } from './components/utils/utils.component';
+import { LayoutCssComponent } from './components/layout/css/layout-css.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { UtilsComponent } from './components/utils/utils.component';
     AppComponent,
     HeaderComponent,
     LayoutBootstrapComponent,
+    LayoutCssComponent,
     ObservableComponent,
     TimeComponent,
     UtilsComponent,
