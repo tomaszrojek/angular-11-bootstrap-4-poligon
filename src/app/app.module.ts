@@ -9,7 +9,7 @@ import {
 } from 'ngx-daterangepicker-bootstrap';
 
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './components/layout/layout.component';
+import { LayoutBootstrapComponent } from './components/layout/bootstrap/layout-bootstrap.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { TimeComponent } from './components/time/time.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,7 +25,7 @@ import { UtilsComponent } from './components/utils/utils.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    LayoutComponent,
+    LayoutBootstrapComponent,
     ObservableComponent,
     TimeComponent,
     UtilsComponent,

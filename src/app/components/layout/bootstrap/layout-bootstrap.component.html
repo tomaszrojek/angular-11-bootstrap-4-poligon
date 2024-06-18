@@ -1,0 +1,224 @@
+<!-- TEMPLATE -->
+
+<h2>Grid layout</h2>
+<p><b>Grid layout #1</b></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="">
+        <div class="p-1">Item 1</div>
+        <div class="p-1">Item 2</div>
+        <div class="p-1">Item 3</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="">
+        <div class="p-1">Item 1</div>
+        <div class="p-1">Item 2</div>
+        <div class="p-1">Item 3</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<p><b>Grid layout #2</b></p>
+<div class="container px-lg-5">
+  <div class="row justify-content-md-center">
+    <div class="col-lg-2">1 of 3</div>
+    <div class="col-md-auto">Variable width content</div>
+    <div class="col-lg-2">3 of 3</div>
+  </div>
+  <div class="row">
+    <div class="col-sm">1 of 3</div>
+    <div class="col-md-auto">Variable width content</div>
+    <div class="col-lg-2">3 of 3</div>
+  </div>
+</div>
+
+<br />
+<p><b>Grid layout #3</b></p>
+<div class="container px-lg-5">
+  <div class="row mx-lg-n5">
+    <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+    <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+  </div>
+</div>
+
+<br />
+<p><b>Grid layout #4 (container-fluid)</b></p>
+<div class="container-fluid px-lg-5">
+  <div class="row mx-lg-n5">
+    <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+    <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+  </div>
+</div>
+
+<br />
+<p><b>Grid layout #5 (dispaly-flex)</b></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div
+        class="d-flex flex-wrap-reverse justify-content-end align-items-center"
+      >
+        <div class="p-1">Item 1</div>
+        <div class="p-1">Item 2</div>
+        <div class="p-1">Item 3</div>
+      </div>
+    </div>
+    <div class="col">
+      <div
+        class="d-flex flex-wrap-reverse justify-content-end align-items-center"
+      >
+        <div class="p-1">Item 1</div>
+        <div class="p-1">Item 2</div>
+        <div class="p-1">Item 3</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULARZ -->
+<br />
+<p><b>Grid layout #6 (form)</b></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="form-group">
+          <button id="testButton" type="button" (click)="test($event)">
+            Test
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<br />
+<p><b>Css display</b></p>
+
+<div style="">
+  <div class="r">
+    <div class="c" style="display: inline-block">
+      <div class="i">Item 1</div>
+      <div class="i">Item 2</div>
+      <div class="i">Item 3</div>
+    </div>
+    <div class="c">
+      <div class="i">Item 1</div>
+      <div class="i">Item 2</div>
+      <div class="i d-inline-flex">Item 3</div>
+    </div>
+  </div>
+</div>
+
+<br />
+<p><b>Grid layout #7</b></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="" style="display: inline-block">
+        <div class="p-1">Item 1</div>
+        <div class="p-1">Item 2</div>
+        <div class="p-1">Item 3</div>
+      </div>
+      <div class="" style="display: inline-block">
+        <div class="p-1">Item 1</div>
+        <div class="p-1">Item 2</div>
+        <div class="p-1">Item 3</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="d-inline-flex">
+        <div class="i">Item 1</div>
+        <div class="i">Item 2</div>
+        <div class="i">Item 3</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<h2>Kontener flex</h2>
+<p><b>flex-row</b></p>
+<div class="d-flex flex-row">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+<div class="d-flex flex-row-reverse">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+
+<div class="d-flex justify-content-between">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+
+<div class="d-flex justify-content-evenly">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+
+<br />
+<p><b>flex-column</b></p>
+<div class="d-flex flex-column">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+<br />
+<div class="d-flex flex-column-reverse">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+<br />
+<br />
+<div class="d-flex align-items-start">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+<br />
+<div class="d-flex flex-column align-items-center">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+<div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+
+<br />
+<p><b>Kontener inline-flex </b></p>
+<div class="d-inline-flex">
+  <div class="p-1">Item 1</div>
+  <div class="p-1">Item 2</div>
+  <div class="p-1">Item 3</div>
+</div>
+<br />
+<div class="d-inline-flex p-2 bd-highlight">
+  I'm an inline flexbox container!
+</div>
+
+<br /><br /><br />
