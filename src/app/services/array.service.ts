@@ -6,6 +6,9 @@ import { timeout } from 'rxjs/operators';
 export class ArrayService {
   constructor() {}
 
+  /**
+   * Updates or inserts item into array and makes copy of array
+   */
   public static updateOrInsertItemWithArrayCopy<T>(
     source: T[],
     predicate: (value: T) => boolean,
@@ -16,6 +19,9 @@ export class ArrayService {
     return [...source.slice(0, index), item, ...source.slice(index + 1)];
   }
 
+  /**
+   * Updates item in array and makes copy of array
+   */
   public static updateItemWithArrayCopy<T>(
     source: T[],
     predicate: (value: T) => boolean,
